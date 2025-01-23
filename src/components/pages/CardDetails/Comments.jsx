@@ -5,9 +5,8 @@ const Comments = ({ cardId }) => {
   const queryClient = useQueryClient();
   const [name, setName] = useState("");
   const [commentText, setCommentText] = useState("");
-
   const {
-    data: comments,
+    data: comments, 
     isLoading,
     isError,
     error,
@@ -18,7 +17,7 @@ const Comments = ({ cardId }) => {
         "https://672a07666d5fa4901b6f7076.mockapi.io/comments"
       );
       if (!response.ok) {
-        throw new Error("Ошибка загрузки комментариев");
+        throw new Error("Ошябка загрузки");
       }
       const data = await response.json();
       return data.filter((comment) => comment.CardID === parseInt(cardId));
@@ -53,7 +52,7 @@ const Comments = ({ cardId }) => {
         }
       );
       if (!response.ok) {
-        throw new Error("Ошибка отправки комментария");
+        throw new Error("Ошибка отправки");
       }
       return response.json();
     },
@@ -76,7 +75,7 @@ const Comments = ({ cardId }) => {
     });
   };
 
-  if (isLoading) return <div>Загрузка комментариев...</div>;
+  if (isLoading) return <div>Загрузка комментов</div>;
   if (isError) return <div>Ошибка: {error.message}</div>;
 
   return (

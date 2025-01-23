@@ -1,3 +1,7 @@
+.back{
+  margin: 1% 0 0 4%;
+}
+
 .block {
     margin-top: 2%;
     &__text{
@@ -28,29 +32,43 @@
         }
     }
 }
-
-// .gallery {
-//     display: flex;
-//     gap: 10px;
-//     padding: 20px;
-//     justify-content: center;
-//     @media (max-width: 436px) {
-//       margin-left: 2px;
-//       scroll-snap-align: start;
-//       overflow-x: scroll;
-//     }
-//   }
-
   .thumbnail {
     width: 150px;
     height: 100px;
     object-fit: cover;
     cursor: pointer;
     border: 2px solid #ccc;
+    @media (max-width: 1025px) {
+      
+    }   
+    @media (max-width: 525px) {
+      width: 70px;
+      height: 50px;
+
+    }
+    @media (max-width: 376px) {
+      width: 70px;
+      height: 50px;
+
+
+    }
   }
   .thumbnails{
     position: fixed;
-    top: 790px; 
+    top: 790px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @media (max-width: 1025px) {
+      top: 600px;
+    }   
+    @media (max-width: 525px) {
+      top: 529px;
+
+    }
+    @media (max-width: 376px) {
+      top: 502px;
+    }
   }
 
   .modal {
@@ -68,10 +86,6 @@
   .modal img {
     max-width:70%;
     max-height: 70%;
-    // @media (max-width: 436px) {
-    //   max-width: 70%;
-    //   max-height: 70%;
-    // }
   }
 
   .close {
@@ -117,8 +131,8 @@
 }
 .bigImage{
     border-radius: 15px;
-    width: 500px;
-    height: 400px;
+    width: 25%;
+    // height: 25%;
     display: flex;
     @media (max-width: 1025px) {
       // display: none;
@@ -137,18 +151,7 @@
     }
 
 }
-.block__img1{
-  // width: 25%;
 
-}
-.block__img2{
-  // width: 25%;
-
-}
-.block__img3{
-  // width: 25%;
-
-}
 
 .coments {
   margin: 20px;
@@ -187,7 +190,6 @@
   color: #fff;
   border-radius: 15px;
   float: left;
-
 }
 .comments-list {
   margin-top: 20px;
@@ -201,8 +203,6 @@
   padding: 10px;
   margin-bottom: 10px;
   background-color: #222222;
-
-
 }
 .comment-item button {
   margin-top: 10px;

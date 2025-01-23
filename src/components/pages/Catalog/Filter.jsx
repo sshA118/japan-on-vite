@@ -26,9 +26,7 @@ const Filter = ({ onFilter }) => {
               onClick={(e) => {
                 e.preventDefault();
                 onFilter(category.value.toLocaleLowerCase());
-                document
-                  .querySelectorAll(".filter__list__category")
-                  .forEach((el) => {
+                document.querySelectorAll(".filter__list__category").forEach((el) => {
                     el.classList.remove("checked");
                   });
                 e.target.classList.add("checked");

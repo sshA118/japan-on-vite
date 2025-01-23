@@ -41,7 +41,7 @@ const Catalog = () => {
                 const response = await fetch(url);
                 console.log('43');
                 
-                if (!response.ok) throw new Error('Ошибка загрузки данных');
+                if (!response.ok) throw new Error('Ошибка загрузки');
                 const newData = await response.json();
 
                 setData((prevData) => (page === 1 ? newData : [...prevData, ...newData]));
